@@ -25,10 +25,9 @@ int main(int argc, char* argv[])
     if (getuid() != 0)
 	{
 	    GtkWidget* dialog;
-		dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK,
-                                        "Root privileges are recommended for running this program!");
-        gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog),"You don't need root to open or save into \"home\" directory. \n\
-Read about running application with root access.");
+		dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "Root privileges – Inactive!");
+        gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog),"Without root you still can change shortcuts for this user.\n\
+If you want to change shortcuts for all users, run this program as sudo.");
         g_signal_connect_swapped (dialog, "response", G_CALLBACK(gtk_widget_destroy), dialog);
 		gtk_dialog_run(GTK_DIALOG(dialog));
 		root_access = false;
@@ -39,7 +38,7 @@ Read about running application with root access.");
     }
 
     // display main window
-    mainwindow_show();
+    mainwindow_show(root_access);
 
     // and start application
     gtk_main();

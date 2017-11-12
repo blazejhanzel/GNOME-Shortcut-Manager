@@ -4,6 +4,7 @@ MainWindow mainwindow;
 FileManagerDataStruct datastruct;
 std::string location_to_save;
 bool unsaved_changes = false;
+bool root_access;
 
 void mainwindow_set_unsaved_changes()
 {
@@ -68,10 +69,19 @@ void mainwindow_toolbar_open()
     GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_OPEN;
     gint res;
 
-    dialog = gtk_file_chooser_dialog_new ("/usr/share/applications/ – Choose .desktop file", GTK_WINDOW(mainwindow.window),
+    dialog = gtk_file_chooser_dialog_new ("Choose .desktop file", GTK_WINDOW(mainwindow.window),
                                           action, "_Cancel", GTK_RESPONSE_CANCEL, "_Open", GTK_RESPONSE_ACCEPT, NULL);
     chooser = GTK_FILE_CHOOSER (dialog);
-    gtk_file_chooser_set_current_folder (chooser, "/usr/share/applications/"); // default run location
+    if (root_access == true)
+    {
+        gtk_file_chooser_set_current_folder (chooser, "/usr/share/applications/"); // default run location for sudo
+    }
+    else
+    {
+        std::string path = getenv("HOME");
+        path += "/.local/share/applications";
+        gtk_file_chooser_set_current_folder (chooser, path.c_str()); // default run location for non-sudo
+    }
     res = gtk_dialog_run (GTK_DIALOG (dialog));
 
     if (res == GTK_RESPONSE_ACCEPT)
@@ -93,10 +103,19 @@ void mainwindow_toolbar_saveas()
     GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SAVE;
     gint res;
 
-    dialog = gtk_file_chooser_dialog_new ("/usr/share/applications/ – Save as .desktop file", GTK_WINDOW(mainwindow.window),
+    dialog = gtk_file_chooser_dialog_new ("Save as .desktop file", GTK_WINDOW(mainwindow.window),
                                           action, "_Cancel", GTK_RESPONSE_CANCEL, "_Save", GTK_RESPONSE_ACCEPT, NULL);
     chooser = GTK_FILE_CHOOSER (dialog);
-    gtk_file_chooser_set_current_folder (chooser, "/usr/share/applications/"); // default run location
+    if (root_access == true)
+    {
+        gtk_file_chooser_set_current_folder (chooser, "/usr/share/applications/"); // default run location for sudo
+    }
+    else
+    {
+        std::string path = getenv("HOME");
+        path += "/.local/share/applications";
+        gtk_file_chooser_set_current_folder (chooser, path.c_str()); // default run location for non-sudo
+    }
     gtk_file_chooser_set_do_overwrite_confirmation (chooser, TRUE);
     res = gtk_dialog_run (GTK_DIALOG (dialog));
 
@@ -113,11 +132,11 @@ void mainwindow_toolbar_saveas()
 
         mainwindow_get_data_from_fields();
         filemanager_save(filename, datastruct);
+        unsaved_changes = false;
+        filemanager_set_chmodx(location_to_save, root_access);
     }
 
     gtk_widget_destroy (dialog);
-    unsaved_changes = false;
-    filemanager_set_chmodx(location_to_save);
 }
 
 void mainwindow_toolbar_save()
@@ -127,7 +146,7 @@ void mainwindow_toolbar_save()
         mainwindow_get_data_from_fields();
         filemanager_save(location_to_save, datastruct);
         unsaved_changes = false;
-        filemanager_set_chmodx(location_to_save);
+        filemanager_set_chmodx(location_to_save, root_access);
     }
     else
     {
@@ -214,7 +233,8 @@ void mainwindow_init(GtkBuilder *builder)
     g_signal_connect(GTK_EDITABLE(mainwindow.shortcut_type_combo), "changed", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
 }
 
-void mainwindow_show()
+void mainwindow_show(bool root_acc)
 {
+    root_access = root_acc;
     gtk_widget_show_all(mainwindow.window);
 }

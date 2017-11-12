@@ -27,6 +27,7 @@ enum DataTags
     NAME,
     TYPE,
     EXEC,
+    URL,
     ICON,
     TERMINAL,
     STARTUP_NOTIFY,
@@ -39,6 +40,6 @@ enum DataTags
 void filemanager_save(std::string, FileManagerDataStruct);
 FileManagerDataStruct filemanager_load(std::string);
 void filemanager_clear_file_info(FileManagerDataStruct*);
-void filemanager_set_chmodx(std::string);
+void filemanager_set_chmodx(std::string, bool);
 
 #endif // FILEMANAGER_H

@@ -21,6 +21,6 @@ struct MainWindow
 };
 enum ApplicationTypes { APPLICATION, LINK, DIRECTORY };
 void mainwindow_init(GtkBuilder*);
-void mainwindow_show();
+void mainwindow_show(bool);
 
 #endif // MAINWINDOW_H

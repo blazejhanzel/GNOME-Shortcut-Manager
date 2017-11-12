@@ -10,7 +10,14 @@ void filemanager_save(std::string filename, FileManagerDataStruct data)
     f << "[Desktop Entry]" << std::endl;
     f << "Name=" << data.name << std::endl;
     f << "Type=" << data.shortcut_type << std::endl;
-    f << "Exec=" << data.exec << std::endl;
+    if (data.shortcut_type == "Link")
+    {
+        f << "URL=" << data.exec << std::endl;
+    }
+    else
+    {
+        f << "Exec=" << data.exec << std::endl;
+    }
     f << "Icon=" << data.icon << std::endl;
     f << "Terminal=" << [](bool data)->std::string { return (data) ? "true" : "false"; }(data.start_in_terminal) << std::endl;
     f << "StartupNotify=" << [](bool data)->std::string { return (data) ? "true" : "false"; }(data.notify_on_startup) << std::endl;
@@ -43,6 +50,7 @@ FileManagerDataStruct filemanager_load(std::string filename)
     data_tags[NAME] = "Name=";
     data_tags[TYPE] = "Type=";
     data_tags[EXEC] = "Exec=";
+    data_tags[URL] = "URL=";
     data_tags[ICON] = "Icon=";
     data_tags[TERMINAL] = "Terminal=";
     data_tags[STARTUP_NOTIFY] = "StartupNotify=";
@@ -90,6 +98,7 @@ FileManagerDataStruct filemanager_load(std::string filename)
                     break;
                 }
                 case EXEC:
+                case URL:
                     datastruct.exec = data;
                     datastruct.exec.erase(str, data_tags[i].size());
                     break;
@@ -144,9 +153,12 @@ void filemanager_clear_file_info(FileManagerDataStruct* datastruct)
     datastruct->mimetypes.clear();
 }
 
-void filemanager_set_chmodx(std::string filename)
+void filemanager_set_chmodx(std::string filename, bool as_root)
 {
     std::string command;
-    command = "sudo chmod +x " + filename;
+    if (as_root == true)
+        command = "sudo chmod +x " + filename;
+    else
+        command = "chmod +x " + filename;
     system(command.c_str());
 }
