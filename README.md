@@ -10,7 +10,7 @@ Use sidebar at the right to choose site, you want to read.
 3. On the toolbar at the top of application you have options, in sequence:
 New, Open, Save, Save As, About, Quit (this is too simple to explain how it works :P)
 
-# Editing / Creating shorcut
+### Editing / Creating shorcut
 1. Open existing file using "Open" toolbar button or just type text into fields to create new file.
 2. Regardless you open existing file or create new one, you have some fields to fill, in sequence:
 * *Display name* - This name will be shown in GNOME Dash
