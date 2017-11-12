@@ -10,6 +10,8 @@ Use sidebar at the right to choose site, you want to read.
 3. On the toolbar at the top of application you have options, in sequence:
 New, Open, Save, Save As, About, Quit (this is too simple to explain how it works :P)
 
+![](https://raw.githubusercontent.com/blahax2g/GNOME-Shortcut-Manager/master/docs/img/menu_editor_v1-0.png)
+
 ### Editing / Creating shorcut
 1. Open existing file using "Open" toolbar button or just type text into fields to create new file.
 2. Regardless you open existing file or create new one, you have some fields to fill, in sequence:
