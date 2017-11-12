@@ -1,11 +1,12 @@
 # Prerequisites
 *.d
 
-# Compiled Object files
+# Compiled Object files and folders
 *.slo
 *.lo
 *.o
 *.obj
+obj/
 
 # Precompiled Headers
 *.gch
@@ -30,3 +31,4 @@
 *.exe
 *.out
 *.app
+bin/
