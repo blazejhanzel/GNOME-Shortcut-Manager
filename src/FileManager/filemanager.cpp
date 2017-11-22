@@ -25,7 +25,7 @@ void filemanager_save(std::string filename, FileManagerDataStruct data)
     f << "Categories=" << data.categories << std::endl;
     f << "MimeType=" << data.mimetypes << std::endl;
 
-    for (int i=0; i<data.unknown_data.size(); i++)
+    for (size_t i=0; i<data.unknown_data.size(); i++)
     {
         f << data.unknown_data[i] << std::endl;
     }
@@ -62,7 +62,7 @@ FileManagerDataStruct filemanager_load(std::string filename)
     while (!f.eof()) // if not on the end of file
     {
         getline(f,data);
-        int str; // string temporary info variable
+        unsigned int str; // string temporary info variable
         int i;
 
         for (i=0; i <= UNKNOWN; i++)

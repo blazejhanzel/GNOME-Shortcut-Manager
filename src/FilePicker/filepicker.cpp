@@ -7,7 +7,7 @@ std::string filepicker_pick_path()
     GtkFileChooser *chooser;
     GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_OPEN;
     gint res;
-    std::string filename;
+    std::string filename = "";
 
     dialog = gtk_file_chooser_dialog_new ("Pick your file", NULL, action, "_Cancel", GTK_RESPONSE_CANCEL,
                                           "_Pick path", GTK_RESPONSE_ACCEPT, NULL);
@@ -17,11 +17,7 @@ std::string filepicker_pick_path()
     if (res == GTK_RESPONSE_ACCEPT)
     {
         filename = gtk_file_chooser_get_filename (chooser);
-        gtk_widget_destroy (dialog);
-        return filename;
     }
-    else
-    {
-        gtk_widget_destroy (dialog);
-    }
+    gtk_widget_destroy (dialog);
+    return filename;
 }
