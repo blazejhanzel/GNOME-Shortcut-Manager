@@ -27,4 +27,3 @@ I'm going to add simple editor for this field in the future.
 * *Mimetypes [Special option]* - Use it only if you know system-defined mimetypes, separate them with ";".
 I'm going to add simple editor for this field in the future.
 3. Save file using "Save" or "Save as" button from toolbar.
-
