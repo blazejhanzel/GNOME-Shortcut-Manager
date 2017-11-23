@@ -113,6 +113,31 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
+              <object class="GtkToolButton" id="toolbar_item_delete">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Click to remove active shortcut from disk.</property>
+                <property name="label" translatable="yes">Delete</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-delete</property>
+                <accelerator key="x" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkToolButton" id="toolbar_item_about">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -458,7 +483,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
     <property name="transient_for">main_window</property>
     <property name="attached_to">main_window</property>
     <property name="program_name">GNOME Shortcut Manager</property>
-    <property name="version">1.0.2</property>
+    <property name="version">1.0.3</property>
     <property name="copyright" translatable="yes">Copyright © 2017 blahax2g </property>
     <property name="comments" translatable="yes">Tiny menu editor for GNOME3</property>
     <property name="website">https://github.com/blahax2g/GNOME-Shortcut-Manager</property>

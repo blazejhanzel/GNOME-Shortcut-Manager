@@ -25,7 +25,7 @@ void filemanager_save(std::string filename, FileManagerDataStruct data)
     f << "Categories=" << data.categories << std::endl;
     f << "MimeType=" << data.mimetypes << std::endl;
 
-    for (size_t i=0; i<data.unknown_data.size(); i++)
+    for (int i=0; i<data.unknown_data.size(); i++) // FIXME: Doesn't read data when int => size_t
     {
         f << data.unknown_data[i] << std::endl;
     }
@@ -62,7 +62,7 @@ FileManagerDataStruct filemanager_load(std::string filename)
     while (!f.eof()) // if not on the end of file
     {
         getline(f,data);
-        unsigned int str; // string temporary info variable
+        int str; // string temporary info variable // FIXME: Doesn't read data when int => unsigned int
         int i;
 
         for (i=0; i <= UNKNOWN; i++)
@@ -160,5 +160,15 @@ void filemanager_set_chmodx(std::string filename, bool as_root)
         command = "sudo chmod +x " + filename;
     else
         command = "chmod +x " + filename;
+    system(command.c_str());
+}
+
+void filemanager_delete_file(std::string filename, bool as_root)
+{
+    std::string command;
+    if (as_root == true)
+        command = "sudo rm " + filename;
+    else
+        command = "rm " + filename;
     system(command.c_str());
 }

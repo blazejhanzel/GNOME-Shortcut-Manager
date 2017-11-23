@@ -40,6 +40,21 @@ void mainwindow_filepicker_icon_to_entry()
     gtk_entry_set_text(mainwindow.entryfield["icon"], filename.c_str());
 }
 
+void mainwindow_delete_active_file()
+{
+    if (location_to_save.length() > 0)
+    {
+        filemanager_delete_file(location_to_save, root_access);
+    }
+    else
+    {
+        GtkWidget* dialog;
+		dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "Nothing to delete!");
+        g_signal_connect_swapped (dialog, "response", G_CALLBACK(gtk_widget_destroy), dialog);
+		gtk_dialog_run(GTK_DIALOG(dialog));
+    }
+}
+
 void mainwindow_get_data_from_fields()
 {
     datastruct.name = gtk_entry_get_text(mainwindow.entryfield["name"]);
@@ -196,8 +211,8 @@ void mainwindow_init(GtkBuilder *builder)
     mainwindow.toolbar["item_new"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_new"));
     mainwindow.toolbar["item_open"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_open"));
     mainwindow.toolbar["item_save"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_save"));
-                                      // TODO: Grey when inactive, inactive if not used yet
     mainwindow.toolbar["item_saveas"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_saveas"));
+    mainwindow.toolbar["item_delete"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_delete"));
     mainwindow.toolbar["item_about"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_about"));
     mainwindow.toolbar["item_quit"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_quit"));
     mainwindow.entryfield["name"] = GTK_ENTRY(gtk_builder_get_object(builder, "entryfield_name"));
@@ -218,6 +233,7 @@ void mainwindow_init(GtkBuilder *builder)
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_open"]), "clicked", G_CALLBACK(mainwindow_toolbar_open), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_save"]), "clicked", G_CALLBACK(mainwindow_toolbar_save), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_saveas"]), "clicked", G_CALLBACK(mainwindow_toolbar_saveas), NULL);
+    g_signal_connect(G_OBJECT(mainwindow.toolbar["item_delete"]), "clicked", G_CALLBACK(mainwindow_delete_active_file), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_about"]), "clicked", G_CALLBACK(aboutwindow_show), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_quit"]), "clicked", G_CALLBACK(mainwindow_quit), NULL);
     g_signal_connect(G_OBJECT(mainwindow.filechooserbutton["exec"]), "clicked", G_CALLBACK(mainwindow_filepicker_exec_to_entry), NULL);
