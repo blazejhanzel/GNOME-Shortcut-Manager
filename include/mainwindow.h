@@ -5,9 +5,9 @@
 #include <string>
 #include <map>
 #include <iostream>
-#include "../AboutWindow/aboutwindow.h"
-#include "../FileManager/filemanager.h"
-#include "../FilePicker/filepicker.h"
+#include "aboutwindow.h"
+#include "filemanager.h"
+#include "filepicker.h"
 
 struct MainWindow
 {

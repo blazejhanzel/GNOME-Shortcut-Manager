@@ -1,4 +1,4 @@
-#include "filepicker.h"
+#include "../include/filepicker.h"
 
 std::string filepicker_pick_path()
 {
