@@ -24,26 +24,26 @@ OUTPUT = GNOME-Shortcut-Manager
 # Included sources and headers
 # PLEASE: Keep this list alphabetically, excluding main
 # main Should be at the beginning
-SOURCES = $(SRC_DIR)/main.cpp \
-	$(SRC_DIR)/aboutwindow.cpp \
-	$(SRC_DIR)/filemanager.cpp \
-	$(SRC_DIR)/filepicker.cpp \
-	$(SRC_DIR)/mainwindow.cpp
+SOURCES = main.cpp \
+	aboutwindow.cpp \
+	filemanager.cpp \
+	filepicker.cpp \
+	mainwindow.cpp
 
 HEADERS =\
-	$(INCLUDE_DIR)/aboutwindow.h \
-	$(INCLUDE_DIR)/filemanager.h \
-	$(INCLUDE_DIR)/filepicker.h \
-	$(INCLUDE_DIR)/mainwindow.h
+	aboutwindow.h \
+	filemanager.h \
+	filepicker.h \
+	mainwindow.h
 
 # Main compilation command
 # Keep this clean, everything is in variables; above
-all: dirs $(SOURCES) $(HEADERS)
-	$(CC) $(SOURCES) $(HEADERS) $(CFLAGS) $(LIBS) $(ADD_FLAGS) -o $(BIN_DIR)/$(OUTPUT)
+all: dirs $(SRC_DIR)/$(SOURCES) $(INCLUDE_DIR)/$(HEADERS)
+	$(CC) $(SRC_DIR)/$(SOURCES) $(INCLUDE_DIR)/$(HEADERS) $(CFLAGS) $(LIBS) $(ADD_FLAGS) -o $(BIN_DIR)/$(OUTPUT)
 
 # Clean command
 clean:
-	rm -f -r $(BIN_DIR)
+	rm -f $(BIN_DIR)/$(OUTPUT)
 
 # Create Directiories before compiling
 dirs:
