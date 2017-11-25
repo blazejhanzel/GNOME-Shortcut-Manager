@@ -3,8 +3,8 @@
 #include <sys/types.h>
 #include <stdio.h>
 #include <string.h>
-#include "MainWindow/mainwindow.h"
-#define UI_FILE "gnome-shortcut-manager.ui"
+#include "../include/mainwindow.h"
+#define UI_FILE "../data/ui/gnome-shortcut-manager.ui"
 
 int main(int argc, char* argv[])
 {

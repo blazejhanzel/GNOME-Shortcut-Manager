@@ -1,4 +1,4 @@
-#include "aboutwindow.h"
+#include "../include/aboutwindow.h"
 
 AboutWindow aboutwindow;
 
