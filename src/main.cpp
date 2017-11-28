@@ -5,6 +5,7 @@
 #include <string.h>
 #include "../include/mainwindow.h"
 #define UI_FILE "../data/ui/gnome-shortcut-manager.ui"
+#define UI_CATSEDITOR "../data/ui/cats-editor.ui"
 
 int main(int argc, char* argv[])
 {
@@ -19,6 +20,8 @@ int main(int argc, char* argv[])
     gtk_builder_add_from_file(builder, UI_FILE, NULL);
     aboutwindow_init(builder);
     mainwindow_init(builder);
+    gtk_builder_add_from_file(builder, UI_CATSEDITOR, NULL);
+    categorieseditor_init(builder);
     g_object_unref(builder);
 
     // root is needed

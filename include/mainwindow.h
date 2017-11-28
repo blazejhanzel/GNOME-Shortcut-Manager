@@ -6,6 +6,7 @@
 #include <map>
 #include <iostream>
 #include "aboutwindow.h"
+#include "categorieseditor.h"
 #include "filemanager.h"
 #include "filepicker.h"
 
@@ -15,9 +16,10 @@ struct MainWindow
     std::map <std::string, GtkToolButton*> toolbar;
     std::map <std::string, GtkEntry*> entryfield;
     std::map <std::string, GtkToggleButton*> checkbutton;
-    GtkComboBoxText *shortcut_type_combo;
+    GtkComboBoxText *shortcuttypecombo;
     std::map <std::string, GtkButton*> filechooserbutton;
     std::map <std::string, GtkRadioButton*> radiobutton;
+    GtkButton* catseditorbutton;
 };
 enum ApplicationTypes { APPLICATION, LINK, DIRECTORY };
 void mainwindow_init(GtkBuilder*);
