@@ -19,14 +19,25 @@
 #include <sys/types.h>
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
 #include "../include/mainwindow.h"
+#define APP_NAME "GNOME-Shortcut-Manager"
 #define UI_FILE "../data/ui/gnome-shortcut-manager.ui"
 #define UI_FILE_MIRROR "data/ui/gnome-shortcut-manager.ui"
 #define UI_CATSEDITOR "../data/ui/cats-editor.ui"
 #define UI_CATSEDITOR_MIRROR "data/ui/cats-editor.ui"
 
+std::string app_path;
+
 int main(int argc, char* argv[])
 {
+    std::string path;
+
+    // set app_path
+    std::string app_name = APP_NAME;
+    app_path = argv[0];
+    app_path.erase(app_path.size()-app_name.size(),app_name.size());
+
     bool root_access;
 	setreuid(0, getuid());
 
@@ -35,17 +46,21 @@ int main(int argc, char* argv[])
 
     // GtkBuilder initializers
     GtkBuilder* builder = gtk_builder_new();
-    if(gtk_builder_add_from_file(builder, UI_FILE, NULL) == 0) // returned error
+    path = app_path + UI_FILE;
+    if(gtk_builder_add_from_file(builder, path.c_str(), NULL) == 0) // returned error
     {
-        gtk_builder_add_from_file(builder, UI_FILE_MIRROR, NULL);
+        path = app_path + UI_FILE_MIRROR;
+        gtk_builder_add_from_file(builder, path.c_str(), NULL);
     }
     aboutwindow_init(builder);
     mainwindow_init(builder);
-    if(gtk_builder_add_from_file(builder, UI_CATSEDITOR, NULL) == 0) // returned error
+    path = app_path + UI_CATSEDITOR;
+    if(gtk_builder_add_from_file(builder, path.c_str(), NULL) == 0) // returned error
     {
-        gtk_builder_add_from_file(builder, UI_CATSEDITOR_MIRROR, NULL);
+        path = app_path + UI_CATSEDITOR_MIRROR;
+        gtk_builder_add_from_file(builder, path.c_str(), NULL);
     }
-    categorieseditor_init(builder);
+    categorieseditor_init(builder, app_path);
     g_object_unref(builder);
 
     // root is needed

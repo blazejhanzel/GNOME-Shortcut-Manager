@@ -13,7 +13,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 #ifndef CATEGORIESEDITOR_H
 #define CATEGORIESEDITOR_H
 
@@ -43,7 +43,7 @@ struct CategoriesEditor
     std::map <int, std::string> cat_sys_dictionary;
 };
 
-void categorieseditor_init(GtkBuilder*);
+void categorieseditor_init(GtkBuilder*, std::string);
 void categorieseditor_show(FileManagerDataStruct*, GtkEntry*);
 
 #endif // CATEGORIESEDITOR_H

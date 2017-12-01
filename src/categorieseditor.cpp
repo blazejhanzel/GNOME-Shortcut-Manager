@@ -97,14 +97,17 @@ void categorieseditor_save_database()
     categorieseditor_quit();
 }
 
-void categorieseditor_init(GtkBuilder* builder)
+void categorieseditor_init(GtkBuilder* builder, std::string app_path)
 {
+    std::string path;
     // dictionaries init
     std::fstream f;
-    f.open(MAIN_CAT_DICT, std::ios::in);
+    path = app_path + MAIN_CAT_DICT;
+    f.open(path.c_str(), std::ios::in);
     if (f.is_open() == false)
     {
-        f.open(MAIN_CAT_DICT_MIRROR, std::ios::in);
+        path = app_path + MAIN_CAT_DICT_MIRROR;
+        f.open(path.c_str(), std::ios::in);
         if (f.is_open() == false)
             categorieseditor_throw_dictloadingerror(MAIN_CAT_DICT_MIRROR);
     }
@@ -117,10 +120,12 @@ void categorieseditor_init(GtkBuilder* builder)
         f.close();
     }
 
-    f.open(SYS_CAT_DICT, std::ios::in);
+    path = app_path + SYS_CAT_DICT;
+    f.open(path.c_str(), std::ios::in);
     if (f.is_open() == false)
     {
-        f.open(SYS_CAT_DICT_MIRROR, std::ios::in);
+        path = app_path + SYS_CAT_DICT_MIRROR;
+        f.open(path.c_str(), std::ios::in);
         if (f.is_open() == false)
             categorieseditor_throw_dictloadingerror(SYS_CAT_DICT_MIRROR);
     }
@@ -133,10 +138,12 @@ void categorieseditor_init(GtkBuilder* builder)
         f.close();
     }
 
-    f.open(ADD_CAT_DICT, std::ios::in);
+    path = app_path + ADD_CAT_DICT;
+    f.open(path.c_str(), std::ios::in);
     if (f.is_open() == false)
     {
-        f.open(ADD_CAT_DICT_MIRROR, std::ios::in);
+        path = app_path + ADD_CAT_DICT_MIRROR;
+        f.open(path.c_str(), std::ios::in);
         if (f.is_open() == false)
             categorieseditor_throw_dictloadingerror(ADD_CAT_DICT_MIRROR);
     }
