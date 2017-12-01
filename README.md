@@ -1,8 +1,8 @@
 # GNOME Shortcut Manager
 
 [![GitHub release](https://img.shields.io/github/release/blahax2g/GNOME-Shortcut-Manager.svg?style=flat-square)](https://github.com/blahax2g/GNOME-Shortcut-Manager/releases)
-![Github Releases](https://img.shields.io/github/downloads/blahax2g/GNOME-Shortcut-Manager/total.svg?style=flat-square)
 ![GitHub Release Date](https://img.shields.io/github/release-date/blahax2g/GNOME-Shortcut-Manager.svg?style=flat-square)
+![Github Releases](https://img.shields.io/github/downloads/blahax2g/GNOME-Shortcut-Manager/total.svg?style=flat-square)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/blahax2g/GNOME-Shortcut-Manager.svg?style=flat-square)
 [![license](https://img.shields.io/github/license/blahax2g/GNOME-Shortcut-Manager.svg?style=flat-square)](https://github.com/blahax2g/GNOME-Shortcut-Manager/blob/master/LICENSE)
 
