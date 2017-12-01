@@ -4,7 +4,7 @@
 #include <gtk/gtk.h>
 #include <string>
 #include <map>
-#include <vector>
+#include <fstream>
 #include <cctype>
 #include <iostream>
 #include "filemanager.h"
