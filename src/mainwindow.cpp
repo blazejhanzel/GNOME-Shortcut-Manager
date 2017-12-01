@@ -40,6 +40,11 @@ void mainwindow_filepicker_icon_to_entry()
     gtk_entry_set_text(mainwindow.entryfield["icon"], filename.c_str());
 }
 
+void mainwindow_open_categories_editor()
+{
+    categorieseditor_show(&datastruct,mainwindow.entryfield["categories"]);
+}
+
 void mainwindow_delete_active_file()
 {
     if (location_to_save.length() > 0)
@@ -248,7 +253,7 @@ void mainwindow_init(GtkBuilder *builder)
     g_signal_connect(GTK_TOGGLE_BUTTON(mainwindow.checkbutton["notify"]), "toggled", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
     g_signal_connect(GTK_TOGGLE_BUTTON(mainwindow.checkbutton["hide"]), "toggled", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
     g_signal_connect(GTK_EDITABLE(mainwindow.shortcuttypecombo), "changed", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
-    g_signal_connect(G_OBJECT(mainwindow.catseditorbutton), "clicked", G_CALLBACK(categorieseditor_show), NULL);
+    g_signal_connect(G_OBJECT(mainwindow.catseditorbutton), "clicked", G_CALLBACK(mainwindow_open_categories_editor), NULL);
 }
 
 void mainwindow_show(bool root_acc)

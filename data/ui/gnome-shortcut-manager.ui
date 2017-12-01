@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.1 
+<!-- Generated with glade 3.20.1
 
 Copyright (C) 2017 blahax2g
 
@@ -494,7 +494,7 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
     <property name="transient_for">main_window</property>
     <property name="attached_to">main_window</property>
     <property name="program_name">GNOME Shortcut Manager</property>
-    <property name="version">1.0.3</property>
+    <property name="version">1.1</property>
     <property name="copyright" translatable="yes">Copyright © 2017 blahax2g </property>
     <property name="comments" translatable="yes">Tiny menu editor for GNOME3</property>
     <property name="website">https://github.com/blahax2g/GNOME-Shortcut-Manager</property>

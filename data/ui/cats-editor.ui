@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.1
+<!-- Generated with glade 3.20.1 
 
 Copyright (C) 2017 blahax2g
 
@@ -177,19 +177,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_rastergraphics_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">1</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_p2p_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -255,19 +242,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_3dgraphics_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">2</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_remoteaccess_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -294,7 +268,7 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_geoscience_checkbutton">
+              <object class="GtkCheckButton" id="cat_add_geoscience_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -329,19 +303,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </object>
               <packing>
                 <property name="left_attach">2</property>
-                <property name="top_attach">3</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_scanning_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
                 <property name="top_attach">3</property>
               </packing>
             </child>
@@ -411,19 +372,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_ocr_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">4</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_telephonytools_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -485,19 +433,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </object>
               <packing>
                 <property name="left_attach">2</property>
-                <property name="top_attach">5</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_photography_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
                 <property name="top_attach">5</property>
               </packing>
             </child>
@@ -567,19 +502,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_publishing_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">6</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_webbrowser_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -641,19 +563,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </object>
               <packing>
                 <property name="left_attach">2</property>
-                <property name="top_attach">7</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_viewer_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
                 <property name="top_attach">7</property>
               </packing>
             </child>
@@ -723,19 +632,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_texttools_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">8</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_midi_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -797,19 +693,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </object>
               <packing>
                 <property name="left_attach">2</property>
-                <property name="top_attach">9</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_desktopsettings_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
                 <property name="top_attach">9</property>
               </packing>
             </child>
@@ -879,19 +762,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_hardwaresettings_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">10</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_sequencer_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -953,19 +823,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </object>
               <packing>
                 <property name="left_attach">2</property>
-                <property name="top_attach">11</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_printing_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
                 <property name="top_attach">11</property>
               </packing>
             </child>
@@ -1035,19 +892,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_packagemanager_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">12</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_tv_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -1113,19 +957,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_dialup_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">13</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_audiovideoediting_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -1175,32 +1006,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               <packing>
                 <property name="left_attach">7</property>
                 <property name="top_attach">13</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_flowchart_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">14</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_instantmessaging_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">14</property>
               </packing>
             </child>
             <child>
@@ -1256,32 +1061,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_pda_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">15</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_chat_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">15</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_recorder_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -1331,32 +1110,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               <packing>
                 <property name="left_attach">7</property>
                 <property name="top_attach">15</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_projectmanagement_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">16</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_ircclient_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">16</property>
               </packing>
             </child>
             <child>
@@ -1412,32 +1165,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_presentation_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">17</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_feed_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">17</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_actiongame_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -1490,32 +1217,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_spreadsheet_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">18</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_feed">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">3</property>
-                <property name="top_attach">18</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_adventuregame_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -1565,19 +1266,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               <packing>
                 <property name="left_attach">7</property>
                 <property name="top_attach">18</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_wordprocessor_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">19</property>
               </packing>
             </child>
             <child>
@@ -1646,19 +1334,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
-              <object class="GtkCheckButton" id="cat_add_2dgraphics_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">20</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkCheckButton" id="cat_add_hamradio_checkbutton">
                 <property name="label" translatable="yes">checkbutton</property>
                 <property name="visible">True</property>
@@ -1721,19 +1396,6 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               <packing>
                 <property name="left_attach">7</property>
                 <property name="top_attach">20</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="cat_add_vectorgraphics_checkbutton">
-                <property name="label" translatable="yes">checkbutton</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">2</property>
-                <property name="top_attach">21</property>
               </packing>
             </child>
             <child>
@@ -1970,6 +1632,344 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
               </packing>
             </child>
             <child>
+              <object class="GtkCheckButton" id="cat_add_feed_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">18</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_ircclient_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">17</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_chat_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">16</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_instantmessaging_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">15</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_dialup_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">14</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_packagemanager_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">13</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_printing_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">12</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_hardwaresettings_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">11</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_desktopsettings_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">10</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_texttools_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">9</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_viewer_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">8</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_publishing_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">7</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_photography_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_ocr_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_scanning_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_3dgraphics_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_rastergraphics_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_vectorgraphics_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_2dgraphics_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">21</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_wordprocessor_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">20</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_spreadsheet_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">19</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_presentation_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">18</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_projectmanagement_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">17</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_pda_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">16</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_flowchart_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">15</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="cat_add_finance_checkbutton">
+                <property name="label" translatable="yes">checkbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">14</property>
+              </packing>
+            </child>
+            <child>
               <placeholder/>
             </child>
             <child>
@@ -2052,7 +2052,7 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="accept_button">
             <property name="label" translatable="yes">Accept</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -2064,7 +2064,7 @@ along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="reject_button">
             <property name="label" translatable="yes">Reject</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
