@@ -25,7 +25,7 @@ void aboutwindow_init(GtkBuilder *builder)
 
     // connecting signals
     gtk_builder_connect_signals(builder, NULL);
-    g_signal_connect (aboutwindow.window, "delete-event", G_CALLBACK (gtk_widget_hide_on_delete), NULL);
+    g_signal_connect(aboutwindow.window, "delete-event", G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 }
 
 void aboutwindow_show()

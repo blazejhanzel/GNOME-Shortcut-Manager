@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.1 
+<!-- Generated with glade 3.20.1
 
-Copyright (C)
+Copyright (C) 2017 blahax2g
 
-This file is part of .
+This file is part of GNOME-Shortcut-Manager.
 
- is free software: you can redistribute it and/or modify
+GNOME-Shortcut-Manager is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
- is distributed in the hope that it will be useful,
+GNOME-Shortcut-Manager is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with .  If not, see <http://www.gnu.org/licenses/>.
+along with GNOME-Shortcut-Manager.  If not, see <http://www.gnu.org/licenses/>.
 
 -->
 <interface>
@@ -388,7 +388,6 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">13</property>
-                <property name="width">2</property>
               </packing>
             </child>
             <child>
@@ -461,6 +460,18 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 <property name="top_attach">6</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkButton" id="catseditor_open_button">
+                <property name="label" translatable="yes">...</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">13</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -483,7 +494,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
     <property name="transient_for">main_window</property>
     <property name="attached_to">main_window</property>
     <property name="program_name">GNOME Shortcut Manager</property>
-    <property name="version">1.0.3</property>
+    <property name="version">1.1</property>
     <property name="copyright" translatable="yes">Copyright © 2017 blahax2g </property>
     <property name="comments" translatable="yes">Tiny menu editor for GNOME3</property>
     <property name="website">https://github.com/blahax2g/GNOME-Shortcut-Manager</property>

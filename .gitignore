@@ -32,3 +32,6 @@ obj/
 *.out
 *.app
 bin/
+
+# Glade temporary files
+*.ui~

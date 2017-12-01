@@ -1,0 +1,4 @@
+Screensaver
+TrayIcon
+Applet
+Shell

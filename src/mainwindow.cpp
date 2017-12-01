@@ -40,7 +40,7 @@ void mainwindow_reload_fields()
                                  [](bool data)->gboolean { return (data) ? TRUE : FALSE; } (datastruct.notify_on_startup));
     gtk_toggle_button_set_active(mainwindow.checkbutton["hide"],
                                  [](bool data)->gboolean { return (data) ? TRUE : FALSE; } (datastruct.hidden));
-    gtk_combo_box_set_active(GTK_COMBO_BOX(mainwindow.shortcut_type_combo), [](std::string data)->int { if (data == "Directory") return DIRECTORY;
+    gtk_combo_box_set_active(GTK_COMBO_BOX(mainwindow.shortcuttypecombo), [](std::string data)->int { if (data == "Directory") return DIRECTORY;
                              else if (data == "Link") return LINK; else return APPLICATION; } (datastruct.shortcut_type));
 }
 
@@ -54,6 +54,11 @@ void mainwindow_filepicker_icon_to_entry()
 {
     std::string filename = filepicker_pick_path();
     gtk_entry_set_text(mainwindow.entryfield["icon"], filename.c_str());
+}
+
+void mainwindow_open_categories_editor()
+{
+    categorieseditor_show(&datastruct,mainwindow.entryfield["categories"]);
 }
 
 void mainwindow_delete_active_file()
@@ -81,7 +86,7 @@ void mainwindow_get_data_from_fields()
     datastruct.start_in_terminal = gtk_toggle_button_get_active(mainwindow.checkbutton["terminal"]);
     datastruct.notify_on_startup = gtk_toggle_button_get_active(mainwindow.checkbutton["notify"]);
     datastruct.hidden = gtk_toggle_button_get_active(mainwindow.checkbutton["hide"]);
-    datastruct.shortcut_type = gtk_combo_box_text_get_active_text(mainwindow.shortcut_type_combo);
+    datastruct.shortcut_type = gtk_combo_box_text_get_active_text(mainwindow.shortcuttypecombo);
 }
 
 void mainwindow_toolbar_new()
@@ -239,9 +244,10 @@ void mainwindow_init(GtkBuilder *builder)
     mainwindow.checkbutton["terminal"] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "checkbutton_terminal"));
     mainwindow.checkbutton["notify"] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "checkbutton_notify"));
     mainwindow.checkbutton["hide"] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "checkbutton_hide"));
-    mainwindow.shortcut_type_combo = GTK_COMBO_BOX_TEXT(gtk_builder_get_object(builder, "combo_type"));
+    mainwindow.shortcuttypecombo = GTK_COMBO_BOX_TEXT(gtk_builder_get_object(builder, "combo_type"));
     mainwindow.filechooserbutton["exec"] = GTK_BUTTON(gtk_builder_get_object(builder, "pick_execpath_button"));
     mainwindow.filechooserbutton["icon"] = GTK_BUTTON(gtk_builder_get_object(builder, "pick_iconpath_button"));
+    mainwindow.catseditorbutton = GTK_BUTTON(gtk_builder_get_object(builder, "catseditor_open_button"));
 
     // connecting signals
     g_signal_connect(G_OBJECT(mainwindow.window), "delete-event", G_CALLBACK(mainwindow_quit), NULL);
@@ -262,7 +268,8 @@ void mainwindow_init(GtkBuilder *builder)
     g_signal_connect(GTK_TOGGLE_BUTTON(mainwindow.checkbutton["terminal"]), "toggled", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
     g_signal_connect(GTK_TOGGLE_BUTTON(mainwindow.checkbutton["notify"]), "toggled", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
     g_signal_connect(GTK_TOGGLE_BUTTON(mainwindow.checkbutton["hide"]), "toggled", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
-    g_signal_connect(GTK_EDITABLE(mainwindow.shortcut_type_combo), "changed", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
+    g_signal_connect(GTK_EDITABLE(mainwindow.shortcuttypecombo), "changed", G_CALLBACK(mainwindow_set_unsaved_changes), NULL);
+    g_signal_connect(G_OBJECT(mainwindow.catseditorbutton), "clicked", G_CALLBACK(mainwindow_open_categories_editor), NULL);
 }
 
 void mainwindow_show(bool root_acc)

@@ -21,6 +21,9 @@
 #include <string.h>
 #include "../include/mainwindow.h"
 #define UI_FILE "../data/ui/gnome-shortcut-manager.ui"
+#define UI_FILE_MIRROR "data/ui/gnome-shortcut-manager.ui"
+#define UI_CATSEDITOR "../data/ui/cats-editor.ui"
+#define UI_CATSEDITOR_MIRROR "data/ui/cats-editor.ui"
 
 int main(int argc, char* argv[])
 {
@@ -32,9 +35,17 @@ int main(int argc, char* argv[])
 
     // GtkBuilder initializers
     GtkBuilder* builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, UI_FILE, NULL);
+    if(gtk_builder_add_from_file(builder, UI_FILE, NULL) == 0) // returned error
+    {
+        gtk_builder_add_from_file(builder, UI_FILE_MIRROR, NULL);
+    }
     aboutwindow_init(builder);
     mainwindow_init(builder);
+    if(gtk_builder_add_from_file(builder, UI_CATSEDITOR, NULL) == 0) // returned error
+    {
+        gtk_builder_add_from_file(builder, UI_CATSEDITOR_MIRROR, NULL);
+    }
+    categorieseditor_init(builder);
     g_object_unref(builder);
 
     // root is needed

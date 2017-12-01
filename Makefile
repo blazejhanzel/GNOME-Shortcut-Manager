@@ -26,12 +26,14 @@ OUTPUT = GNOME-Shortcut-Manager
 # main Should be at the beginning
 SOURCES = $(SRC_DIR)/main.cpp \
 	$(SRC_DIR)/aboutwindow.cpp \
+	$(SRC_DIR)/categorieseditor.cpp \
 	$(SRC_DIR)/filemanager.cpp \
 	$(SRC_DIR)/filepicker.cpp \
 	$(SRC_DIR)/mainwindow.cpp
 
 HEADERS =\
 	$(INCLUDE_DIR)/aboutwindow.h \
+	$(INCLUDE_DIR)/categorieseditor.h \
 	$(INCLUDE_DIR)/filemanager.h \
 	$(INCLUDE_DIR)/filepicker.h \
 	$(INCLUDE_DIR)/mainwindow.h
