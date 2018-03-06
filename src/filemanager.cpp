@@ -188,3 +188,29 @@ void filemanager_delete_file(std::string filename, bool as_root)
         command = "rm " + filename;
     system(command.c_str());
 }
+
+void filemanager_create_app_shortcuts(std::string program_loc)
+{
+    FileManagerDataStruct data;
+
+    // for root access
+    std::string sudo_loc = "sudo " + program_loc;
+    data.name = "[S] GNOME Shortcut Manager";
+    data.shortcut_type = "Application";
+    data.exec = sudo_loc;
+    data.start_in_terminal = true;
+    data.notify_on_startup = true;
+    data.hidden = false;
+    data.categories = "System;GNOME;";
+    filemanager_save("~/.local/share/applications/gsm-root.desktop", data);
+
+    // for no root access
+    data.name = "GNOME Shortcut Manager";
+    data.shortcut_type = "Application";
+    data.exec = program_loc;
+    data.start_in_terminal = true;
+    data.notify_on_startup = true;
+    data.hidden = false;
+    data.categories = "System;GNOME;";
+    filemanager_save("~/.local/share/applications/gsm-noroot.desktop", data);
+}

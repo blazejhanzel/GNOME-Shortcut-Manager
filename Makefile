@@ -13,7 +13,7 @@ CC = g++
 # Additional compile parameters
 CFLAGS = -std=c++14 `pkg-config --cflags gtk+-3.0 gmodule-2.0` -rdynamic
 LIBS = `pkg-config --libs gtk+-3.0 gmodule-2.0`
-ADD_FLAGS = -g -Wall # -g and -Wall are for debugging
+ADD_FLAGS = -g # -g and -Wall are for debugging
 
 # Directiories / output files
 BIN_DIR = bin

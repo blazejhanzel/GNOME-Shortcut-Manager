@@ -19,6 +19,7 @@
 MainWindow mainwindow;
 FileManagerDataStruct datastruct;
 std::string location_to_save;
+std::string location_of_program_with_name;
 bool unsaved_changes = false;
 bool root_access;
 
@@ -190,6 +191,11 @@ void mainwindow_toolbar_save()
     }
 }
 
+void mainwindow_toolbar_create_shortcut()
+{
+    filemanager_create_app_shortcuts(location_of_program_with_name);
+}
+
 void mainwindow_quit()
 {
     if (unsaved_changes == true)
@@ -235,6 +241,7 @@ void mainwindow_init(GtkBuilder *builder)
     mainwindow.toolbar["item_saveas"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_saveas"));
     mainwindow.toolbar["item_delete"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_delete"));
     mainwindow.toolbar["item_about"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_about"));
+    mainwindow.toolbar["item_shortcut_create"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_shortcut_create"));
     mainwindow.toolbar["item_quit"] = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "toolbar_item_quit"));
     mainwindow.entryfield["name"] = GTK_ENTRY(gtk_builder_get_object(builder, "entryfield_name"));
     mainwindow.entryfield["exec"] = GTK_ENTRY(gtk_builder_get_object(builder, "entryfield_exec"));
@@ -257,6 +264,7 @@ void mainwindow_init(GtkBuilder *builder)
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_saveas"]), "clicked", G_CALLBACK(mainwindow_toolbar_saveas), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_delete"]), "clicked", G_CALLBACK(mainwindow_delete_active_file), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_about"]), "clicked", G_CALLBACK(aboutwindow_show), NULL);
+    g_signal_connect(G_OBJECT(mainwindow.toolbar["item_shortcut_create"]), "clicked", G_CALLBACK(mainwindow_toolbar_create_shortcut), NULL);
     g_signal_connect(G_OBJECT(mainwindow.toolbar["item_quit"]), "clicked", G_CALLBACK(mainwindow_quit), NULL);
     g_signal_connect(G_OBJECT(mainwindow.filechooserbutton["exec"]), "clicked", G_CALLBACK(mainwindow_filepicker_exec_to_entry), NULL);
     g_signal_connect(G_OBJECT(mainwindow.filechooserbutton["icon"]), "clicked", G_CALLBACK(mainwindow_filepicker_icon_to_entry), NULL);
@@ -272,8 +280,9 @@ void mainwindow_init(GtkBuilder *builder)
     g_signal_connect(G_OBJECT(mainwindow.catseditorbutton), "clicked", G_CALLBACK(mainwindow_open_categories_editor), NULL);
 }
 
-void mainwindow_show(bool root_acc)
+void mainwindow_show(bool root_acc, std::string program_location)
 {
+    location_of_program_with_name = program_location;
     root_access = root_acc;
     gtk_widget_show_all(mainwindow.window);
 }

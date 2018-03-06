@@ -13,7 +13,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
 
@@ -58,5 +58,6 @@ FileManagerDataStruct filemanager_load(std::string);
 void filemanager_clear_file_info(FileManagerDataStruct*);
 void filemanager_set_chmodx(std::string, bool);
 void filemanager_delete_file(std::string, bool);
+void filemanager_create_app_shortcuts(std::string);
 
 #endif // FILEMANAGER_H

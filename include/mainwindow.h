@@ -39,6 +39,6 @@ struct MainWindow
 };
 enum ApplicationTypes { APPLICATION, LINK, DIRECTORY };
 void mainwindow_init(GtkBuilder*);
-void mainwindow_show(bool);
+void mainwindow_show(bool, std::string);
 
 #endif // MAINWINDOW_H

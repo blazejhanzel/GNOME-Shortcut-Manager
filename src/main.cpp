@@ -27,10 +27,17 @@
 #define UI_CATSEDITOR "../data/ui/cats-editor.ui"
 #define UI_CATSEDITOR_MIRROR "data/ui/cats-editor.ui"
 
-std::string app_path;
+std::string get_working_directory()
+{
+  char buff[FILENAME_MAX];
+  getcwd( buff, FILENAME_MAX );
+  std::string current_working_dir(buff);
+  return current_working_dir;
+}
 
 int main(int argc, char* argv[])
 {
+    std::string app_path;
     std::string path;
 
     // set app_path
@@ -80,7 +87,7 @@ If you want to change shortcuts for all users, run this program as sudo.");
     }
 
     // display main window
-    mainwindow_show(root_access);
+    mainwindow_show(root_access, get_working_directory());
 
     // and start application
     gtk_main();
