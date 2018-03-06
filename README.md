@@ -9,8 +9,6 @@
 GNOME Shortcut Manager is simple and free (GPL3 licensed) application that help you creates or edit shortcuts
 for applications in GNOME Dash (application browser).
 
-Use sidebar at the right to choose site, you want to read.
-
 ## How to use GNOME Shortcut Manager?
 1. Download version you want from "Release" section (I recommend the newest version for you, but it's your choose).
 2. Run "GNOME Shortcut Manager" file with sudo access and executable permissions.
